@@ -25,7 +25,7 @@ stories_rag:
   k: 2
 
 travel_sqlagent_configs:
-  travel_sqldb_dir: "data/travel.sqlite"
+  travel_sqldb_dir: "data/travel.db"
   llm: "llama3.1"
   llm_temperature: 0.0
   
