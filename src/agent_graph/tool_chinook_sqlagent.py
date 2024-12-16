@@ -83,7 +83,7 @@ class ChinookSQLAgent:
             llm_temerature (float): The temperature value for the LLM, determining the randomness of the model's output.
         """
         self.sql_agent_llm = ChatOllama(
-            model=llm, temperature=llm_temerature)
+            model=llm,base_url="http://127.0.0.1:11434", temperature=llm_temerature)
 
         self.db = SQLDatabase.from_uri(f"sqlite:///{sqldb_directory}")
         print(self.db.get_usable_table_names())
