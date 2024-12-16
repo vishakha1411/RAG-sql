@@ -22,7 +22,7 @@ def build_graph():
     with several predefined tools (e.g., databases, search functions, policy lookup, etc.).
     """
     # Initialize Llama3.1 using Ollama
-    primary_llm = ChatOllama(model="llama3.1", temperature=TOOLS_CFG.primary_agent_llm_temperature)
+    primary_llm = ChatOllama(model="llama3.1",base_url="http://127.0.0.1:11434", temperature=TOOLS_CFG.primary_agent_llm_temperature)
 
     # Initialize Nomic-Text embeddings for any embedding-based functionality
     embedding=OllamaEmbeddings(model="nomic-embed-text")
