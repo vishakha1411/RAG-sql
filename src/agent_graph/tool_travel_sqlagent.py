@@ -40,7 +40,7 @@ class TravelSQLAgentTool:
             llm_temerature (float): The temperature setting for the language model, controlling response randomness.
         """
         self.sql_agent_llm = ChatOllama(
-            model=llm, temperature=llm_temerature)
+            model=llm,base_url="http://127.0.0.1:11434", temperature=llm_temerature)
         self.system_role = """Given the following user question, corresponding SQL query, and SQL result, answer the user question.\n
             Question: {question}\n
             SQL Query: {query}\n
